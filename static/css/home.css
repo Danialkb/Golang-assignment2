@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+a {
+    color: dodgerblue;
+    text-decoration: none;
+}
+
+a:hover{
+    opacity: 0.8;
+}
+
+.sign-in-link {
+    font-size: 18px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.sign-in-link:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+
+.form {
+    margin: 20px auto;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    opacity: 0.9;
+}
+
+.items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.item-container {
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    /*min-width: 250px;*/
+}
+
+.item-info {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.item-info a:hover {
+    opacity: 0.8;
+}
+
+img {
+    margin: 20px 0;
+    width: 170px;
+    height: auto;
+}
+
+p {
+    margin: 10px 0;
+    font-size: 15px;
+    color: #333;
+}
+
+.filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.filter-form label {
+    margin: 0 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.filter-form button[type="submit"] {
+    margin-left: 20px;
+}
+
+.filter-form input[type="checkbox"] {
+    transform: scale(1.4);
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Store</title>
+    <link rel="stylesheet" href="../static/css/home.css">
+</head>
+
+<body>
+<header>
+    <a href="http://localhost:8000"><h1>My Store</h1></a>
+    {{if .IsAuthorized}}
+        <p style="font-size: 18px">Welcome {{.user.Username}}!</p>
+        <form method="POST" action="/logout">
+            <a href="http://localhost:8000/logout" style="font-size: 18px" class="sign-in-link">Log out</a>
+        </form>
+    {{else}}
+        <a href="http://localhost:8000/login" style="font-size: 18px" class="sign-in-link">Sign In</a>
+    {{end}}
+</header>
+<form method="GET" action="/search" class="form">
+    <input type="text" placeholder="Search..." name="search">
+    <button type="submit" style="padding: 7px">Search</button>
+</form>
+
+<form method="POST" action="/" class="filter-form">
+    <input type="checkbox" name="filterPrice" id="filter-by-price">
+    <label for="filter-by-price">Filter by price</label>
+    <input type="checkbox" name="filterName" id="filter-by-name">
+    <label for="filter-by-name">Filter by name</label>
+    <button type="submit">Filter</button>
+</form>
+
+<div class="items-container">
+    {{ range .items }}
+    <div class="item-container">
+        <div class="item-info">
+            <a href="#"><h3>{{ .Name }}</h3></a>
+            <img src="{{ .Image }}">
+            <p>{{ .Description }}</p>
+            <p>Price: ${{ .Price }}</p>
+            <p>Rating: {{ .Rating }}</p>
+            <a href="http://localhost:8000/rate?id={{.ID}}" class="sign-in-link">Rate</a>
+        </div>
+    </div>
+    {{end}}
+</div>
+</body>
+</html>
